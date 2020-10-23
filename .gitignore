@@ -1,0 +1,10 @@
+# Client
+/client/node_modules
+/client/build
+/client/.env
+
+# Server
+/server/node_modules
+/server/dist
+/server/coverage
+/serer/.env

@@ -1,0 +1,83 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Comment {
+  addedAt: DateTime!
+  author: User!
+  id: String!
+  post: Post!
+  text: String!
+}
+
+input CommentInput {
+  authorId: String!
+  postId: String!
+  text: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  createComment(commentInput: CommentInput!): Comment!
+  createPost(postInput: PostInput!): Post!
+  deleteComment(id: String!): Comment!
+  deletePost(id: String!): Post!
+  login(userInput: UserLoginInput!): String!
+  register(userInput: UserRegisterInput!): String!
+  setUserRole(userInput: UserSetRoleInput!): User!
+}
+
+type Post {
+  author: User!
+  comments: [Comment!]!
+  header: String!
+  id: String!
+  publishedAt: DateTime!
+  text: String!
+}
+
+input PostInput {
+  authorId: String!
+  header: String!
+  text: String!
+}
+
+type Query {
+  getAllPosts: [Post!]!
+  getPost(id: String!): Post!
+}
+
+enum Role {
+  Admin
+  Author
+}
+
+type User {
+  comments: [Comment!]!
+  email: String!
+  id: String!
+  name: String!
+  posts: [Post!]!
+  role: Role!
+}
+
+input UserLoginInput {
+  email: String!
+  password: String!
+}
+
+input UserRegisterInput {
+  email: String!
+  name: String!
+  password: String!
+}
+
+input UserSetRoleInput {
+  email: String!
+  password: String!
+  role: Role!
+}
