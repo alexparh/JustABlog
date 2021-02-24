@@ -2,10 +2,7 @@
 
 ## What is it?
 
-This a simple blog web app (such as [Habr](https://habr.com/ru/feed/) or [Medium](https://medium.com/))
-
-## How it looks like?
-Some image later...
+This a simple blog web app with auth, users, posts) (such as [Habr](https://habr.com/ru/feed/) or [Medium](https://medium.com/))
 
 ## What technologies the app uses?
 
@@ -25,12 +22,4 @@ Cleint:
 - [Styled Components](https://styled-components.com/)
 
 Auth:
-JWT - [in memory token + todo: HttpOnly refresh token](https://hasura.io/blog/best-practices-of-using-jwt-with-graphql) 
-
-## Installation
-
-...
-
-## Running the app
-
-...
+JWT - [in memory token + not done: HttpOnly refresh token](https://hasura.io/blog/best-practices-of-using-jwt-with-graphql)
